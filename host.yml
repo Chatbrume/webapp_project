@@ -9,8 +9,7 @@ prod:
   hosts:
     client1:
       ansible_host: 10.0.6.4
-      instance:
-        name: ENSUP
-        port: 8080
-        site_name: webapp
-        title: MyWebApp
+      name: ENSUP
+      port: 8080
+      project_name: webapp
+      title: MyWebApp
