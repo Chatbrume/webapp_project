@@ -1,0 +1,3 @@
+---
+# Install a role for static webapp
+- src: chatbrume.webapp_role

@@ -1,0 +1,26 @@
+---
+- name: Deploy a container
+  hosts: all
+  roles:
+    - chatbrume.webapp_role
+  pre_tasks:
+
+    - name: install dependencies
+      package:
+        name: "{{ item }}"
+        state: "present"
+      loop:
+        - epel-release
+        - git
+      when: ansible_distribution == "CentOS"
+
+    - name: "download Python-pip for docker module"
+      get_url:
+        url: https://bootstrap.pypa.io/pip/2.7/get-pip.py
+        dest: /tmp/get-pip.py
+
+    - name: "install python-pip"
+      command: python2.7 /tmp/get-pip.py
+
+    - name: Install docker python
+      pip: name=docker-py
