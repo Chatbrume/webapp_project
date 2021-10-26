@@ -4,6 +4,10 @@ Pour cette exercice j'ai utiliser la platforme [eazytraining](https://docker.lab
 Login: devops
 Password: devops
 
+Crée deux instance:
+- "eazytraining/ansible" que l'on nommera master ci-dessous
+- "eazytraining/client" que l'on nommera client ci-dessous
+
 ## Création machine virtuelle
 
 ## Installation sur master
@@ -24,7 +28,7 @@ Charger le role:
 
 Installer sur le client:
 ```cwd
-ansible-playbook -i host.yml admin.yml
+ansible-playbook -i host.yml webapp.yml
 BECOME password: admin
 ```
 
