@@ -14,4 +14,3 @@ prod:
         port: 8080
         site_name: webapp
         title: MyWebApp
-        host_ip: 10.0.6.4
