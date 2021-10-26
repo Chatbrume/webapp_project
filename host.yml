@@ -7,10 +7,10 @@ all:
 prod:
   hosts:
     client1:
-      ansible_host: 10.0.16.4
+      ansible_host: 10.0.14.4
       instance:
         name: ENSUP
         port: 8080
         site_name: webapp
         title: MyWebApp
-        host_ip: 10.0.16.4
+        host_ip: 10.0.14.4
